@@ -1,7 +1,14 @@
 const express = require('express')
 const app = express()
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
+app.get('/', (req, res) =>{
+    res.send('hello pppppp')
 })
+
+app.get('/api', (req,res) =>{
+    res.json({
+        code:0,
+        message:'api anjay'
+    })
+})
+
 app.listen(process.env.PORT || 3000)
